@@ -1,0 +1,235 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --red: #eb4a5a;
+    --white: #f9fafc;
+    --light_grey: #f6f3f3;
+    --grey: #434343;
+    --blue: #274671;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+}
+/** Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: var(--light_grey);
+    position: fixed;
+    width: 100%;
+}
+.nav__img {
+    height: 55px;
+}
+.nav__button {
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--grey);
+    transition: 0.5s;
+}
+.nav__button:hover {
+    transform: scale(1.2);
+}
+/** Desplegable carrito */
+.nav__car {
+    background-color: var(--light_grey);
+    height: 90vh;
+    width: 40%;
+    position: fixed;
+    top: 65px;
+    overflow-y: scroll;
+    transition: 0.5s;
+    box-shadow: 5px 10px 20px 0px #43434384;
+    left: 100%;
+}
+.nav__car--visible {
+    left: 60%;
+}
+/** Carrito */
+.car__product {
+    max-width: 300px;
+}
+.car__product__image {
+    display: flex;
+    justify-content: center;
+}
+.car__product__image img {
+    max-width: 250px;
+}
+.car__product__description {
+    margin: 20px 30px;
+}
+.car__product__button {
+    display: flex;
+    justify-content: flex-end;
+}
+/*Boton delete del carrito*/
+.delete__product {
+    margin-bottom: 20px;
+    border: none;
+    background-color: var(--red);
+    padding: 10px 20px;
+    color: var(--white);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.delete__product:hover {
+    transform: scale(1.1);
+}
+.empty__button {
+    border: none;
+    width: 100px;
+    padding: 10px;
+    background-color: var(--grey);
+    color: var(--white);
+    border-radius: 20px;
+    margin: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.empty__button:hover {
+    transform: scale(1.1);
+}
+/** Header */
+.header {
+    height: 350px;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__img {
+    height: 200px;
+    margin-top: 60px;
+}
+/** Main */
+.main__h3 {
+    margin: 40px;
+    font-size: 30px;
+    color: var(--grey);
+    font-weight: 500;
+}
+.main__products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px 40px;
+}
+.products__element {
+    max-width: 300px;
+}
+.products__img {
+    max-width: 290px;
+}
+/**Boton Add to car*/
+.products__button { 
+    align-items: center;
+    background-color: var(--red); 
+    padding: 10px 15px ;
+    border: none;
+    font-size: 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--light_grey);
+    margin-bottom: 10px ;
+    transition: 0.7s;  
+}
+.products__button:hover{
+    cursor: pointer;
+    box-shadow: 0px 1px 4px 1.5px #8515d0e0;
+
+}
+.products__div{
+    display: flex;
+    justify-content: center;
+}
+.products__element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 1px 4px 1.5px #919092e0;
+    border-radius: 10px;
+}
+/**Button detail class inspect*/
+.inspect{ 
+    align-items: center;
+    background-color: var(--grey); 
+    padding: 10px 15px ;
+    border: none;
+    font-size: 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--light_grey);
+    margin-bottom: 10px ;
+    transition: 0.7s;  
+}
+.product__button__inspect{
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/** Footer */
+.footer {
+    min-height: 150px;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__p {
+    color: var(--white);
+    font-size: 24px;
+}
+/* Media queries */
+@media screen and (max-width: 1920px) {
+    .nav__car {
+        width: 20%;
+    }
+    .nav__car--visible {
+        left: 80%;
+    }
+}
+@media screen and (max-width: 1360px) {
+    .nav__car {
+        width: 30%;
+    }
+    .nav__car--visible {
+        left: 70%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .nav__car {
+        width: 35%;
+    }
+    .nav__car--visible {
+        left: 65%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav__car {
+        width: 45%;
+    }
+    .nav__car--visible {
+        left: 55%;
+    }
+}
+@media screen and (max-width: 574px) {
+    .nav__car {
+        width: 80%;
+    }
+    .nav__car--visible {
+        left: 20%;
+    }
+}
